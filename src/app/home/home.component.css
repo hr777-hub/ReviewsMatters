@@ -1,0 +1,32 @@
+.home-text {
+  position: static;
+  width: 805px;
+  height: 204px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 67px;
+
+  color: #000000;
+}
+.home-text-cp {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+
+  position: absolute;
+  width: 825px;
+  height: 224px;
+  left: 15px;
+  top: 250px;
+}
+.home-illustration {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 858px;
+  top: 140px;
+}

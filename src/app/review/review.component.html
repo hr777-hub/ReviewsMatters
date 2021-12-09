@@ -1,0 +1,37 @@
+<div class="card form-control">
+  <div class="card-body p-4">
+    <div class="d-flex flex-start w-100">
+      <img
+        class="rounded-circle shadow-1-strong me-3"
+        src="https://mdbootstrap.com/img/Photos/Avatars/img%20(21).jpg"
+        alt="avatar"
+        width="65"
+        height="65"
+      />
+      <form  #review="ngForm" (ngSubmit)="onSubmit(review)">
+        <div class="w-100">
+          <h3>Add a review</h3>
+
+          <div class="form-outline">
+            <textarea
+              class="form-control"
+              id="textAreaExample"
+              rows="4"
+              ngModel
+              name="review"
+            ></textarea>
+            <label class="form-label" for="textAreaExample"
+              >What is your view?</label
+            >
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <button type="button" class="btn btn-success">Cancel</button>
+            <button type="submit" class="btn btn-danger">
+              Add <i class="fas fa-long-arrow-alt-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

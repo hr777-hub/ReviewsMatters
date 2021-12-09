@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let movie of movies"  class="col-md-6 col-xl-3">
+      <a (click)="goToMovie(movie)">
+        <div class="card m-b-30 mx-2 my-2">
+          <img
+            class="card-img-top img-responsive"
+            src="{{ movie.image}}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h3 class="card-title">{{ movie.movieName}}</h3>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+

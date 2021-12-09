@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <form #login="ngForm" (ngSubmit)="onSubmit(login)" class="box">
+          <h1>Login</h1>
+          <p class="text-muted">Please enter your username and password!</p>
+          <input
+            type="text"
+            placeholder="Username"
+            ngModel
+            name="username"
+            class="form-control"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            ngModel
+            name="password"
+            class="form-control"
+            required
+          />
+          <button  class="btn btn-success" type="submit">Login</button>
+          <div class="col-md-12">
+            <ul class="social-network social-circle">
+              <li>
+                <a href="#" class="icoFacebook" title="Facebook"
+                  ><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="icoTwitter" title="Twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="icoGoogle" title="Google +"
+                  ><i class="fa fa-google" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
