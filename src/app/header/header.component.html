@@ -21,40 +21,14 @@
           <a class="nav-link" routerLink="/movies">Movies</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success mx-2" type="submit">
-          Search
-        </button>
-      </form>
       <div>
         <div *ngIf="!isLoggedIn">
-          <a routerLink="/login"
-            ><button class="btn btn-outline-success mx-2">
-              <i class="fa fa-sign-in" aria-hidden="true"></i>
-              SignIn
-            </button></a
-          >
-          <a routerLink="/signup"
-            ><button class="btn btn-outline-success">
-              <i class="fa fa-user-plus" aria-hidden="true"></i>
-              SignUp
-            </button></a
-          >
+          <a routerLink="/login" class="btn btn-outline-default"><i class="fa fa-sign-in mx-2" aria-hidden="true"></i>SignIn</a>
+          <a routerLink="/signup" class="btn btn-outline-default"><i class="fa fa-user-plus mx-2" aria-hidden="true"></i>SignIn</a>
         </div>
         <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button class="userdetails btn btn-outline-success mx-2" id="dropdownBasic1" ngbDropdownToggle>
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
-          </button>
-          <button  (click)="logout()" class="btn btn-outline-success" ngbDropdownItem>Logout</button>
-          </div>
-          
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="rounded-circle" width="42">
+          <a (click)="logout()" class="btn btn-outline-default"><i class="fa fa-sign-in mx-2" aria-hidden="true"></i>Logout</a>     
         </div>
       </div>
     </div>

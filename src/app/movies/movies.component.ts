@@ -1,7 +1,5 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { throwError } from 'rxjs';
 import { Movies } from './movies';
 import { MoviesServiceService } from './movies-service.service';
 
@@ -17,18 +15,10 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService: MoviesServiceService, private router:Router) { }
 
   ngOnInit() : void {
-    this.getMovies();
-  }
-  public getMovies(){
     this.movieService.getMovies().subscribe(data => {
       this.movies = data;
     }, error => {
-      throwError(error);
-    });
+      console.log(error)
+    })
   }
-
-  goToMovie(movie:Movies): void{
-    this.router.navigate(['/movie', movie.movieId])
-  }
-
 }

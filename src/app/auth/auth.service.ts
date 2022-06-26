@@ -2,7 +2,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { LocalStorageService } from 'ngx-webstorage';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Login } from './login/login';
 import { Signup } from './signup/Signup';
 import { map } from 'rxjs/operators';
@@ -16,7 +15,6 @@ export class AuthService {
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
   @Output() username: EventEmitter<string> = new EventEmitter();
 
-  private apiServerUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient, private localStorage: LocalStorageService) { }
 
@@ -39,12 +37,7 @@ export class AuthService {
       return true;
     }));
   }
-  isLoggedIn(): boolean {
-    return this.getJwtToken() != null;
-  }
-  getJwtToken() {
-    return this.localStorage.retrieve('accessToken');
-  }
+  
   logout(){
     this.http.get('http://localhost:8080/logout').subscribe(data => {
       console.log(data);

@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReviewComponent } from './review/review.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtInterceptor } from './jwt-interceptor';
+import { NgToastModule } from 'ng-angular-popup';
 @NgModule({
     declarations: [
         AppComponent,
@@ -33,7 +34,8 @@ import { JwtInterceptor } from './jwt-interceptor';
         HttpClientModule,
         NgxWebstorageModule.forRoot(),
         MatDialogModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NgToastModule
     ],
     providers: [{
             provide: HTTP_INTERCEPTORS,
