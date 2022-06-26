@@ -16,32 +16,30 @@ import { ReviewComponent } from './review/review.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtInterceptor } from './jwt-interceptor';
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    SignupComponent,
-    HeaderComponent,
-    HomeComponent,
-    MoviesComponent,
-    MovieComponent,
-    ReviewComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    NgxWebstorageModule.forRoot(),
-    MatDialogModule,
-    BrowserAnimationsModule
-
-  ],
-  providers: [ {
-    provide: HTTP_INTERCEPTORS,
-    useClass: JwtInterceptor,
-    multi: true
-  }],
-  bootstrap: [AppComponent],
-  entryComponents:[ReviewComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        SignupComponent,
+        HeaderComponent,
+        HomeComponent,
+        MoviesComponent,
+        MovieComponent,
+        ReviewComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        NgxWebstorageModule.forRoot(),
+        MatDialogModule,
+        BrowserAnimationsModule
+    ],
+    providers: [{
+            provide: HTTP_INTERCEPTORS,
+            useClass: JwtInterceptor,
+            multi: true
+        }],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

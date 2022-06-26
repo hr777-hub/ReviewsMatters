@@ -14,9 +14,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   onSubmit(form:NgForm){
     this.authservice.login(form.value).subscribe(resData => {
-      console.log(resData);
+      alert(resData)
     }, error => {
       console.log(error);
     });
